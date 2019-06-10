@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Cabbage Collector</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="title">
+            <h1>Cabbage Collector</h1>
+        </div>
+
+        <div class="row" id="description">
+            <p>A random number will be shown at the start of the game. Clicking a cabbage will add a specific amount of
+                points to your total score. You win the game by matching your total score to the random number, you lose
+                if you go over the random number.
+                <p>The value of each cabbage is hidden from you until you click on it. Each time the game starts, the
+                    cabbage's values will change. Good luck!</p>
+        </div>
+        <div class="row">
+            <div id="pics">
+                <img src="assets/images/bokchoy.png" width="100px" id="bok">
+                <img src="assets/images/red.png" width="100px" id="red">
+                <img src="assets/images/napa.png" width="100px" id="napa">
+                <img src="assets/images/usa.png" width="100px" id="usa">
+            </div>
+            <div class="col-md-2">
+                <p>Total Score:</p>
+                <h1 id="total"></h1>
+            </div>
+
+            <div class="col-md-2">
+                <p>Target Number:</p>
+                <h1 id="randomNumber"></h1>
+            </div>
+
+            <div class="col-md-2" id="plays">
+                <h5>Wins: <span id="wins"></span></h5>
+                <br>
+                <h5>Loses: <span id="loses"></span></h5>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+
+
+</body>

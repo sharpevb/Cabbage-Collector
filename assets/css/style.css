@@ -1,0 +1,44 @@
+#title {
+    color: #EEF4ED;
+    background-color: #091F3D;
+    padding: 20px;
+    display: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#description {
+    color: #EEF4ED;
+    background-color: #13315C;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+#pics {
+    background-color: #3E6796;
+    padding: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    letter-spacing: 30px;
+    line-height: 120px;
+    width: 555px;
+}
+
+.col-md-2 {
+    color: #EEF4ED;
+    background-color: #14467F;
+    padding: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+#randomNumber {
+    padding-top: 10px;
+}
+
+#plays {
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 30px;
+}
