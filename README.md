@@ -3,7 +3,7 @@
 Play here: https://sharpevb.github.io/Cabbage-Collector/
 
 ## <img src="assets/images/bokchoy.png" height="40" width="40"> Background 
-So you're sitting there, wondering what to make for you annual work cookout. We've all been there, right? As you scroll allrecipes or Food Network, it dawns on you: your meemaw's famous fermented cabbage recipes! But she used to make four different kinds, how could you possible choose which one?
+So you're sitting there, wondering what to make for you annual work cookout. We've all been there, right? As you scroll allrecipes or Food Network, it dawns on you: your meemaw's famous fermented cabbage recipes! But she used to make four different kinds, how could you possibly choose just one?
 
 ## <img src="assets/images/red.png" height="40" width="40"> How to Play
 In order to impress your coworkers, you need to collect as many cabbages needed to start your dishes. 

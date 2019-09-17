@@ -31,7 +31,7 @@ $(document).ready(function () {
 
     // Win
     function yay() {
-        alert("You won!");
+        alert("You won! You cooked the perfect dish and got a promotion!");
         wins++;
         $('#wins').text(wins);
         reset();
@@ -39,7 +39,7 @@ $(document).ready(function () {
     
     // Lose
     function loser() {
-        alert("You lose!");
+        alert("You lose! You were too ambitious and cooked too much.");
         losses++;
         $('#loses').text(losses);
         reset()
