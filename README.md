@@ -16,7 +16,7 @@ Be warned, the value of each cabbage is hidden from you until you click on it! E
 HTML, CSS, Bootstrap, JQuery
 
 ## <img src="assets/images/usa.png" height="40" width="40"> Demo
-
+![playthrough](assets/documentation/playthrough.gif)
 
 ### Thanks so much for playing!
 Play here: https://sharpevb.github.io/Cabbage-Collector/
