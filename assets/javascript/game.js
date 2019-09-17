@@ -1,81 +1,100 @@
-var restart = false
-var totalMin = 19
-var totalMax = 120
-var cabMin = 1
-var cabMax = 12
-var cabArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-var redVal = 2 //ex
-var napaVal = 3 //ex
-var usaVal = 4 //ex
-var currentNum = 0
-var wins = 0
-var loses = 0
-var randomTotal
-
 $(document).ready(function () {
+    // Selects a random number to be shown at the start of the game between 19-120    
+    var Random = Math.floor(Math.random() * 101 + 19)
+    $('#randomNumber').text(Random);
 
+    // Setting up random numbers between 1-12 for each cabbage   
+    var num1 = Math.floor(Math.random() * 11 + 1)
+    var num2 = Math.floor(Math.random() * 11 + 1)
+    var num3 = Math.floor(Math.random() * 11 + 1)
+    var num4 = Math.floor(Math.random() * 11 + 1)
 
-    // Target Number 
-    if (randomTotal = Math.floor(Math.random() * (totalMax - totalMin + 1)) + totalMin) {
-        $("#randomNumber").html(randomTotal);
-    };
+    var userTotal = 0;
+    var wins = 0;
+    var losses = 0;
 
-    // Setting current number to 0
-    if (currentNum >= 0) {
-        $("#total").html(currentNum);
-    };
+    $('#wins').text(wins);
+    $('#loses').text(losses);
 
-    // Wins
-    if (currentNum === randomTotal) {
-        $("#wins").html(wins);
+    // Resets game wihtout refreshing page
+    function reset() {
+        Random = Math.floor(Math.random() * 101 + 19);
+        console.log(Random)
+        $('#randomNumber').text(Random);
+        num1 = Math.floor(Math.random() * 11 + 1);
+        num2 = Math.floor(Math.random() * 11 + 1);
+        num3 = Math.floor(Math.random() * 11 + 1);
+        num4 = Math.floor(Math.random() * 11 + 1);
+        userTotal = 0;
+        $('#total').text(userTotal);
+    }
+
+    // Win
+    function yay() {
+        alert("You won!");
         wins++;
-    }
-    // Loses
-    else if (currentNum >= randomTotal) {
-        $("#loses").html(loses);
-        loses++;
-    }
-
-
-});
-
-// BOK
-function addBok() {
-    for (var i = 0; i < cabArray.length; i++) {
-        var bokVal = cabArray[Math.floor(Math.random() * cabArray.length)];
-        bokVal === cabArray[i];
+        $('#wins').text(wins);
+        reset();
     }
     
-    bokVal = parseInt(bokVal);
-    currentNum += bokVal
-    $("#total").html(currentNum)
+    // Lose
+    function loser() {
+        alert("You lose!");
+        losses++;
+        $('#loses').text(losses);
+        reset()
+    }
 
-    console.log(bokVal);
-}
+    // On Click for each cabbage
+    $('#bok').on('click', function () {
+        userTotal = userTotal + num1;
+        console.log("New userTotal= " + userTotal);
+        $('#total').text(userTotal);      
+        // Win/Lose
+        if (userTotal == Random) {
+            yay();
+        }
+        else if (userTotal > Random) {
+            loser();
+        }
+    })
 
-// RED
-function addRed() {
-    currentNum = currentNum + redVal
-    $("#total").html(currentNum)
-    console.log(redVal);
-    console.log(currentNum);
-}
+    $('#red').on('click', function () {
+        userTotal = userTotal + num2;
+        console.log("New userTotal= " + userTotal);
+        $('#total').text(userTotal);
+        // Win/Lose
+        if (userTotal == Random) {
+            yay();
+        }
+        else if (userTotal > Random) {
+            loser();
+        }
+    })
 
-// NAPA
-function addNapa() {
-    currentNum = currentNum + napaVal
-    $("#total").html(currentNum)
-    console.log(napaVal);
-    console.log(currentNum);
-}
+    $('#napa').on('click', function () {
+        userTotal = userTotal + num3;
+        console.log("New userTotal= " + userTotal);
+        $('#total').text(userTotal);
+        // Win/Lose
+        if (userTotal == Random) {
+            yay();
+        }
+        else if (userTotal > Random) {
+            loser();
+        }
+    })
 
-// USA
-function addUsa() {
-    currentNum = currentNum + usaVal
-    $("#total").html(currentNum)
-    console.log(usaVal);
-    console.log(currentNum);
-} 
-
-
-
+    $('#usa').on('click', function () {
+        userTotal = userTotal + num4;
+        console.log("New userTotal= " + userTotal);
+        $('#total').text(userTotal);
+        // Win/Lose
+        if (userTotal == Random) {
+            yay();
+        }
+        else if (userTotal > Random) {
+            loser();
+        }
+    });
+}); 
